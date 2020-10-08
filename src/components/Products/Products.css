@@ -9,3 +9,10 @@
     color:blue;
     font-weight: 400;
 }
+.main-button{
+    background-color: #FF9900;
+    height:30px;
+    width:150px;
+    border:1px solid yellow;
+    border-radius:5px;
+}
