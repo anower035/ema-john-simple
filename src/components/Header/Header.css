@@ -1,5 +1,9 @@
+
 .Header img{
     height: 80px;
+}
+.Header button{
+    padding:12px 8px 10px 8px;
 }
 .Header{
     text-align: center;

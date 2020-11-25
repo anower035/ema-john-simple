@@ -2,15 +2,15 @@ import React from 'react';
 
 const Cart = (props) => {
     const Cart=props.cart
-    console.log(Cart)
+    // console.log(Cart)
 
-const total=Cart.reduce((total,product) => total+product.price,0)
+// const total=Cart.reduce((total,product) => total+product.price * product.quantity,0)
 
-//  let total=0
-// for (let i = 0; i<Cart.length; i++) {
-//   const product  = Cart[i];
-//   total=total+product.price;
-//     }
+ let total=0
+for (let i = 0; i<Cart.length; i++) {
+  const product  = Cart[i];
+  total=total+product.price * product.quantity;
+    }
  let shippingCost=0;
  if(total > 35){
      shippingCost=0;
@@ -35,7 +35,9 @@ const total=Cart.reduce((total,product) => total+product.price,0)
             <p><small>Shipping Cost:${shippingCost}</small></p>
             <p><small>Tax + Vat:{tax}</small></p>
             <p>Total Price:{grandTotal}</p>
-            
+            {
+                props.children
+            }
         </div>
     );
 };
